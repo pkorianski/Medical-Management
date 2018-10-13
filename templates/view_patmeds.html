@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../static/styles.css">
+  <title>Medication Management</title>
+</head>
+<body>
+  <h1 id="title"> Medication Management </h1>
+  <h2 id="patmedlist">Patient Medications List</h3>
+  <a href="/"><button type="button">MAIN MENU</button></a><br><br>
+  <table style="width:300px">
+    <tr>
+      <th>Patient Name</th>
+      <th>Medication Name</th>
+    </tr>
+    {% for patmed in patmeds %}
+    <tr>
+      <td> {{patmed[0]}}</td>
+      <td> {{patmed[1]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

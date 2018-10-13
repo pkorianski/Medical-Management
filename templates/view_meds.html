@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../static/styles.css">
+  <title>Medication Management</title>
+</head>
+<body>
+  <h1 id="title"> Medication Management </h1>
+  <h2 id="heading">Medication List</h3>
+  <a href="/"><button type="button">MAIN MENU</button></a><br><br>
+  <table style="width:200px">
+    <tr>
+      <th>Medicine Name</th>
+    </tr>
+  {% for medicine in medicines %}
+    <tr>
+      <td>{{medicine[0]}}</td>
+    <tr>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../static/styles.css">
+  <title>Medication Management</title>
+</head>
+<body>
+  <h1 id="title"> Medication Management </h1>
+  <h2 id="dmed">Delete Medication from Patients</h3>
+  <a href="/"><button type="button">MAIN MENU</button></a><br><br>
+</body
+<div>
+  <form method="post" action="/patient_delmed1">
+    <label for="pname"><b>Patient Name: </b></label><br>
+    <select name="pname" id="delmed">
+      {% for p in patients %}
+        <option>{{p[0]}}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Get Medications"></input>
+  </form>
+  <br>
+  <form method="post" action="/patient_delmed2" id="delmed2">
+    <label for="mname"><b>Medicine Name: </b></label><br>
+    <select name="mname">
+      {% for m in medicines %}
+        <option>{{m[0]}}</option>
+      {% endfor %}
+    </select> <br><br>
+    <input type="submit" value="Submit"></input>
+  </form>
+</div>
+</html>
